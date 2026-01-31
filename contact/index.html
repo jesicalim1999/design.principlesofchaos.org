@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontak | Principles of Design Studio</title>
+    <meta name="description" content="Hubungi Principles of Design Studio untuk konsultasi proyek, informasi layanan, atau pertanyaan lainnya. Kami siap membantu mewujudkan visi kreatif Anda.">
+    <meta name="keywords" content="kontak desainer, konsultasi desain, hubungi studio desain, informasi proyek, alamat studio, telepon studio desain">
+    <meta name="author" content="Principles of Design Studio">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .contact-hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ff 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .contact-section {
+            padding: 6rem 0;
+        }
+        
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+        }
+        
+        .contact-info {
+            background: var(--bg-light);
+            padding: 3rem;
+            border-radius: var(--radius);
+        }
+        
+        .contact-methods {
+            margin-top: 2rem;
+        }
+        
+        .contact-method {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            margin-right: 1.5rem;
+            flex-shrink: 0;
+        }
+        
+        .contact-details h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-details p {
+            color: var(--text-light);
+            margin-bottom: 0;
+        }
+        
+        .business-hours {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-top: 2rem;
+            box-shadow: var(--shadow);
+        }
+        
+        .hours-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .hours-list li {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .contact-form-container {
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .form-select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%231f2937' viewBox='0 0 16 16'%3E%3Cpath d='M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 1rem center;
+            background-size: 16px;
+            padding-right: 2.5rem;
+        }
+        
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .map-section {
+            padding: 0 0 6rem;
+        }
+        
+        .map-container {
+            height: 400px;
+            background: var(--bg-light);
+            border-radius: var(--radius);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .map-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #e0f2fe 0%, #f3e8ff 100%);
+        }
+        
+        .map-placeholder i {
+            font-size: 4rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .faq-section {
+            background: var(--bg-light);
+            padding: 6rem 0;
+        }
+        
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .faq-question {
+            padding: 1.5rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        
+        .faq-answer {
+            padding: 0 2rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        
+        .faq-answer.active {
+            padding: 0 2rem 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-toggle {
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-toggle {
+            transform: rotate(180deg);
+        }
+        
+        @media (max-width: 992px) {
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">{"}</span>
+                <span class="logo-text">PrinciplesOfDesign</span>
+            </a>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../services/index.html">Layanan</a></li>
+                <li><a href="../principles/index.html">Prinsip</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about/index.html">Tentang Kami</a></li>
+                <li><a href="../team/index.html">Tim Kami</a></li>
+                <li><a href="../careers/index.html">Karir</a></li>
+                <li><a href="index.html" class="active">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="contact-hero">
+        <div class="container">
+            <h1>Hubungi Kami</h1>
+            <p class="page-subtitle">Mari berdiskusi tentang proyek Anda, atau sekadar menyapa. Kami senang mendengar dari Anda.</p>
+        </div>
+    </header>
+
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h2>Mari Berbicara</h2>
+                    <p>Punya proyek desain yang ingin dikembangkan? Butuh konsultasi tentang branding atau UI/UX? Atau sekadar ingin menyapa? Isi formulir atau hubungi kami langsung.</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Studio Kami</h4>
+                                <p>Jl. Sudirman No. 123<br>Jakarta Selatan, 12190<br>Indonesia</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Telepon & WhatsApp</h4>
+                                <p>+62 812 3456 7890<br>Senin - Jumat, 9:00 - 18:00 WIB</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-method">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <p>hello@principlesofdesign.studio<br>info@principlesofdesign.studio</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="business-hours">
+                        <h4>Jam Operasional</h4>
+                        <ul class="hours-list">
+                            <li><span>Senin - Kamis</span><span>9:00 - 18:00</span></li>
+                            <li><span>Jumat</span><span>9:00 - 17:00</span></li>
+                            <li><span>Sabtu</span><span>10:00 - 15:00</span></li>
+                            <li><span>Minggu</span><span>Libur</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <h2>Kirim Pesan</h2>
+                    <p>Isi formulir di bawah ini dan kami akan membalas dalam 1-2 hari kerja.</p>
+                    
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label" for="name">Nama Lengkap *</label>
+                                <input type="text" class="form-control" id="name" name="name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="form-label" for="email">Email *</label>
+                                <input type="email" class="form-control" id="email" name="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="company">Perusahaan</label>
+                            <input type="text" class="form-control" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="subject">Subjek *</label>
+                            <select class="form-control form-select" id="subject" name="subject" required>
+                                <option value="">Pilih subjek...</option>
+                                <option value="consultation">Konsultasi Proyek</option>
+                                <option value="ui-ux">Layanan UI/UX Design</option>
+                                <option value="branding">Layanan Branding</option>
+                                <option value="graphic">Layanan Desain Grafis</option>
+                                <option value="partnership">Kemitraan & Kolaborasi</option>
+                                <option value="career">Karir & Lowongan</option>
+                                <option value="other">Lainnya</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="budget">Perkiraan Budget Proyek</label>
+                            <select class="form-control form-select" id="budget" name="budget">
+                                <option value="">Pilih range budget...</option>
+                                <option value="10-25">Rp 10-25 juta</option>
+                                <option value="25-50">Rp 25-50 juta</option>
+                                <option value="50-100">Rp 50-100 juta</option>
+                                <option value="100+">Rp 100+ juta</option>
+                                <option value="undecided">Belum pasti</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="form-label" for="message">Pesan *</label>
+                            <textarea class="form-control" id="message" name="message" required placeholder="Ceritakan tentang proyek atau kebutuhan Anda..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title">Kunjungi Studio Kami</h2>
+            <p class="section-subtitle">Ingin bertemu langsung? Kami senang menerima kunjungan dengan perjanjian terlebih dahulu.</p>
+            
+            <div class="map-container">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>Jakarta Design District</h3>
+                    <p>Jl. Sudirman No. 123, Jakarta Selatan</p>
+                    <p style="margin-top: 1rem;"><a href="https://maps.google.com" target="_blank" class="btn btn-outline">Buka di Google Maps</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="container">
+            <h2 class="section-title">Pertanyaan yang Sering Diajukan</h2>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa lama waktu yang dibutuhkan untuk menyelesaikan proyek desain?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Waktu pengerjaan bervariasi tergantung pada kompleksitas dan scope proyek. Proyek branding biasanya membutuhkan 6-10 minggu, UI/UX design 4-12 minggu, dan desain grafis 1-4 minggu. Kami akan memberikan timeline yang lebih spesifik setelah memahami detail proyek Anda.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Bagaimana proses kerja dengan studio Anda?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Proses kami meliputi: (1) Discovery & Consultation, (2) Research & Strategy, (3) Concept Development, (4) Design Execution, (5) Review & Revision, dan (6) Final Delivery. Kami melibatkan klien di setiap tahap untuk memastikan hasil sesuai dengan ekspektasi.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah Anda menerima proyek remote dari luar kota?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Ya, kami rutin bekerja dengan klien dari berbagai kota di Indonesia bahkan luar negeri. Komunikasi dilakukan melalui video call, email, dan tools kolaborasi online. Proses remote kami telah teruji efektif selama bertahun-tahun.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Berapa kisaran harga layanan Anda?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Harga bervariasi berdasarkan jenis dan kompleksitas proyek. Untuk desain logo mulai dari Rp 15 juta, UI/UX design mulai dari Rp 25 juta, dan sistem branding lengkap mulai dari Rp 35 juta. Kami akan memberikan penawaran yang disesuaikan setelah memahami kebutuhan spesifik Anda.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>Apakah saya bisa melihat portfolio proyek serupa sebelumnya?</span>
+                        <i class="fas fa-chevron-down faq-toggle"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Tentu saja! Silakan kunjungi halaman portfolio kami untuk melihat berbagai proyek yang telah kami selesaikan. Jika Anda ingin melihat studi kasus spesifik dari industri tertentu, beri tahu kami dan kami akan berbagi contoh yang relevan (dengan izin klien).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">
+                        <span class="logo-icon">{"}</span>
+                        <span class="logo-text">PrinciplesOfDesign</span>
+                    </a>
+                    <p class="footer-tagline">Mengubah kompleksitas menjadi kejelasan melalui prinsip desain yang terencana.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="../about/index.html">Tentang Kami</a></li>
+                            <li><a href="../team/index.html">Tim Kami</a></li>
+                            <li><a href="../careers/index.html">Karir</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Layanan</h4>
+                        <ul>
+                            <li><a href="../services/ui-ux.html">UI/UX Design</a></li>
+                            <li><a href="../services/branding.html">Branding</a></li>
+                            <li><a href="../services/graphic-design.html">Desain Grafis</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li><a href="index.html">Formulir Kontak</a></li>
+                            <li><a href="mailto:info@principlesofdesign.studio">Email Kami</a></li>
+                            <li><a href="tel:+621234567890">Telepon</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Principles of Design Studio. Semua hak dilindungi.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // FAQ toggle functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                const answer = item.querySelector('.faq-answer');
+                
+                question.addEventListener('click', function() {
+                    // Toggle active class on clicked item
+                    item.classList.toggle('active');
+                    
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.classList.contains('active')) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                });
+            });
+            
+            // Contact form submission
+            document.getElementById('contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real application, you would send this data to a server
+                // For this example, we'll just show an alert
+                alert('Terima kasih! Pesan Anda telah berhasil dikirim. Kami akan menghubungi Anda dalam 1-2 hari kerja.');
+                this.reset();
+            });
+        });
+    </script>
+</body>
+</html>
