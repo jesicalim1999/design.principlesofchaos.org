@@ -1,208 +1,715 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id-ID" prefix="og: https://ogp.me/ns#">
 <head>
+    <!-- Meta Charset & Viewport -->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
     
-    <!-- Meta Tags SEO Profesional -->
-    <title>Principles of Design Studio | Prinsip Desain, Inovasi & Kreativitas</title>
-    <meta name="description" content="Studio desain profesional yang mengkhususkan diri pada prinsip desain yang berani, inovasi kreatif, dan solusi visual yang berdampak. Mengubah kekacauan menjadi kejelasan.">
-    <meta name="keywords" content="prinsip desain, studio desain profesional, desain grafis, desain UI/UX, inovasi kreatif, strategi branding, solusi visual, desain web, identitas merek, desain yang berdampak, chaos design">
+    <!-- Primary Meta Tags -->
+    <title>Principles of Design Studio | Studio Desain Profesional Jakarta</title>
+    <meta name="description" content="Studio desain profesional di Jakarta spesialis UI/UX, branding, dan web development. Transformasi digital bisnis Anda dengan solusi desain yang berdampak.">
+    <meta name="keywords" content="studio desain jakarta, jasa desain UI/UX, branding agency, web development, desain grafis profesional, agency kreatif indonesia">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://principlesofdesign.studio/">
+    
+    <!-- Authorship & Copyright -->
     <meta name="author" content="Principles of Design Studio">
-    <meta name="robots" content="index, follow">
+    <meta name="copyright" content="Principles of Design Studio">
+    <meta name="designer" content="Principles of Design Studio">
+    <meta name="publisher" content="Principles of Design Studio">
     
-    <!-- Open Graph Tags untuk Media Sosial -->
-    <meta property="og:title" content="Principles of Design Studio | Prinsip Desain & Inovasi">
-    <meta property="og:description" content="Studio desain profesional yang mengubah kompleksitas menjadi kejelasan visual.">
+    <!-- Robots Meta -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://design.principlesofchaos.org">
+    <meta property="og:url" content="https://principlesofdesign.studio/">
+    <meta property="og:title" content="Principles of Design Studio | Solusi Desain Digital Profesional">
+    <meta property="og:description" content="Studio desain profesional spesialis UI/UX, branding, dan web development. Hasilkan lebih banyak konversi dengan desain yang berdampak.">
+    <meta property="og:image" content="https://principlesofdesign.studio/assets/images/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Principles of Design Studio - Transformasi Digital Bisnis Anda">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Principles of Design Studio">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://principlesofdesign.studio/">
+    <meta name="twitter:title" content="Principles of Design Studio | Agency Kreatif Jakarta">
+    <meta name="twitter:description" content="Studio desain profesional dengan pendekatan berbasis data untuk hasil maksimal.">
+    <meta name="twitter:image" content="https://principlesofdesign.studio/assets/images/twitter-image.jpg">
+    <meta name="twitter:creator" content="@principlesdesign">
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "ProfessionalService",
+        "name": "Principles of Design Studio",
+        "image": "https://principlesofdesign.studio/assets/images/logo.svg",
+        "@id": "https://principlesofdesign.studio",
+        "url": "https://principlesofdesign.studio",
+        "telephone": "+62-812-3456-7890",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Jl. Sudirman No. 123",
+            "addressLocality": "Jakarta Selatan",
+            "postalCode": "12190",
+            "addressCountry": "ID"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "-6.2088",
+            "longitude": "106.8456"
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday"
+            ],
+            "opens": "09:00",
+            "closes": "18:00"
+        },
+        "sameAs": [
+            "https://www.instagram.com/principlesdesign",
+            "https://www.linkedin.com/company/principlesdesign",
+            "https://dribbble.com/principlesdesign",
+            "https://www.behance.net/principlesdesign"
+        ]
+    }
+    </script>
+    
+    <!-- Additional SEO Meta -->
+    <meta name="language" content="Indonesian">
+    <meta name="coverage" content="Worldwide">
+    <meta name="distribution" content="Global">
+    <meta name="rating" content="General">
+    <meta name="revisit-after" content="7 days">
+    
+    <!-- Mobile Specific -->
+    <meta name="theme-color" content="#2563EB">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=yes">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/assets/favicon/safari-pinned-tab.svg" color="#2563EB">
+    <meta name="msapplication-TileColor" content="#2563EB">
+    <meta name="theme-color" content="#2563EB">
+    
+    <!-- Preload Critical Assets -->
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="preload" href="/js/main.js" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" as="style" crossorigin>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/main.css">
     
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
-<body>
+
+<body class="home-page">
+    <!-- Skip to Main Content -->
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">
-                <span class="logo-icon">{"}</span>
-                <span class="logo-text">PrinciplesOfDesign</span>
-            </a>
-            
-            <button class="menu-toggle" aria-label="Toggle navigation menu">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <ul class="nav-menu">
-                <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li><a href="portfolio/index.html" class="nav-link">Portfolio</a></li>
-                <li><a href="services/index.html" class="nav-link">Layanan</a></li>
-                <li><a href="principles/index.html" class="nav-link">Prinsip</a></li>
-                <li><a href="blog/index.html" class="nav-link">Blog</a></li>
-                <li><a href="contact/index.html" class="nav-link">Kontak</a></li>
-            </ul>
+    <nav class="navbar" role="navigation" aria-label="Main Navigation">
+        <div class="container">
+            <div class="navbar-container">
+                <!-- Logo -->
+                <a href="/" class="navbar-brand" aria-label="Principles of Design Studio Home">
+                    <svg class="logo-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <path d="M20 0L40 20L20 40L0 20L20 0Z" fill="#2563EB"/>
+                        <circle cx="20" cy="20" r="8" fill="white"/>
+                    </svg>
+                    <span class="logo-text">
+                        <span class="logo-primary">Principles</span>
+                        <span class="logo-secondary">of Design</span>
+                    </span>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav-menu" role="menubar">
+                    <li role="none">
+                        <a href="/" class="nav-link active" role="menuitem" aria-current="page">Home</a>
+                    </li>
+                    <li role="none">
+                        <a href="/services/" class="nav-link" role="menuitem">Layanan</a>
+                    </li>
+                    <li role="none">
+                        <a href="/portfolio/" class="nav-link" role="menuitem">Portfolio</a>
+                    </li>
+                    <li role="none">
+                        <a href="/about/" class="nav-link" role="menuitem">Tentang Kami</a>
+                    </li>
+                    <li role="none">
+                        <a href="/insights/" class="nav-link" role="menuitem">Insights</a>
+                    </li>
+                    <li role="none">
+                        <a href="/contact/" class="nav-link" role="menuitem">Kontak</a>
+                    </li>
+                </ul>
+                
+                <!-- CTA Button -->
+                <a href="/contact/consultation/" class="btn btn-primary cta-button" role="button">
+                    Konsultasi Gratis
+                </a>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobile-menu">
+                    <span class="menu-icon"></span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="container hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Mengubah <span class="highlight">Kekacauan</span> Menjadi <span class="highlight">Kejelasan</span></h1>
-                <p class="hero-subtitle">Studio desain profesional yang mengkhususkan diri pada prinsip desain yang berani, inovasi kreatif, dan solusi visual yang mengubah kompleksitas menjadi komunikasi yang powerful.</p>
-                <div class="hero-buttons">
-                    <a href="portfolio/index.html" class="btn btn-primary">Lihat Portfolio</a>
-                    <a href="contact/index.html" class="btn btn-secondary">Konsultasi Proyek</a>
-                </div>
-            </div>
-            <div class="hero-visual">
-                <div class="visual-element abstract-shape-1"></div>
-                <div class="visual-element abstract-shape-2"></div>
-                <div class="visual-element abstract-shape-3"></div>
-            </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+        <div class="mobile-menu-container">
+            <ul class="mobile-nav" role="menu">
+                <li role="none">
+                    <a href="/" class="mobile-nav-link active" role="menuitem" aria-current="page">Home</a>
+                </li>
+                <li role="none">
+                    <a href="/services/" class="mobile-nav-link" role="menuitem">Layanan</a>
+                </li>
+                <li role="none">
+                    <a href="/portfolio/" class="mobile-nav-link" role="menuitem">Portfolio</a>
+                </li>
+                <li role="none">
+                    <a href="/about/" class="mobile-nav-link" role="menuitem">Tentang Kami</a>
+                </li>
+                <li role="none">
+                    <a href="/insights/" class="mobile-nav-link" role="menuitem">Insights</a>
+                </li>
+                <li role="none">
+                    <a href="/contact/" class="mobile-nav-link" role="menuitem">Kontak</a>
+                </li>
+            </ul>
+            <a href="/contact/consultation/" class="btn btn-primary btn-block" role="button">
+                Konsultasi Gratis
+            </a>
         </div>
-    </header>
+    </div>
 
-    <!-- Principles Section -->
-    <section class="principles-section">
-        <div class="container">
-            <h2 class="section-title">Prinsip Desain Kami</h2>
-            <p class="section-subtitle">Filosofi yang memandu setiap proyek dan keputusan kreatif kami</p>
-            
-            <div class="principles-grid">
-                <div class="principle-card">
-                    <div class="principle-icon">
-                        <i class="fas fa-bullseye"></i>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="hero-section" aria-labelledby="hero-title">
+            <div class="container">
+                <div class="hero-grid">
+                    <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
+                        <h1 id="hero-title" class="hero-title">
+                            <span class="text-gradient">Transformasi Digital</span>
+                            Bisnis Anda dengan Desain yang
+                            <span class="text-highlight">Berdampak</span>
+                        </h1>
+                        <p class="hero-description">
+                            Studio desain profesional di Jakarta yang mengkhususkan diri dalam 
+                            <strong>UI/UX Design</strong>, 
+                            <strong>Brand Identity</strong>, dan 
+                            <strong>Web Development</strong>. Kami membantu bisnis meningkatkan konversi dan engagement melalui solusi desain berbasis data.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="/portfolio/" class="btn btn-primary btn-lg" role="button">
+                                Lihat Portfolio Kami
+                                <svg class="btn-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                    <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                            <a href="/contact/consultation/" class="btn btn-outline btn-lg" role="button">
+                                Konsultasi Gratis
+                            </a>
+                        </div>
+                        <div class="hero-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">150+</span>
+                                <span class="stat-label">Proyek Selesai</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">98%</span>
+                                <span class="stat-label">Klien Puas</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">40%</span>
+                                <span class="stat-label">Peningkatan Rata-rata</span>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="principle-title">Kejelasan Tujuan</h3>
-                    <p class="principle-description">Setiap elemen desain harus memiliki tujuan dan fungsi yang jelas, menghilangkan kebingungan dan meningkatkan pengalaman pengguna.</p>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-icon">
-                        <i class="fas fa-layer-group"></i>
+                    <div class="hero-visual" data-aos="fade-left" data-aos-duration="800">
+                        <div class="visual-container">
+                            <!-- Hero visual akan diisi dengan CSS/JS -->
+                            <div class="floating-shapes">
+                                <div class="shape shape-1"></div>
+                                <div class="shape shape-2"></div>
+                                <div class="shape shape-3"></div>
+                            </div>
+                        </div>
                     </div>
-                    <h3 class="principle-title">Hierarki Visual</h3>
-                    <p class="principle-description">Mengorganisir elemen untuk memandu mata pengguna secara alami, menciptakan alur informasi yang intuitif dan mudah diikuti.</p>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-icon">
-                        <i class="fas fa-palette"></i>
-                    </div>
-                    <h3 class="principle-title">Keselarasan Estetika</h3>
-                    <p class="principle-description">Menyeimbangkan bentuk dan fungsi untuk menciptakan karya yang tidak hanya efektif tetapi juga secara visual memukau.</p>
-                </div>
-                
-                <div class="principle-card">
-                    <div class="principle-icon">
-                        <i class="fas fa-sync-alt"></i>
-                    </div>
-                    <h3 class="principle-title">Iterasi Terus Menerus</h3>
-                    <p class="principle-description">Proses desain adalah siklus penyempurnaan yang berkelanjutan, di mana setiap versi membawa kita lebih dekat ke solusi optimal.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Services Preview -->
-    <section class="services-section">
-        <div class="container">
-            <h2 class="section-title">Layanan Desain Profesional</h2>
-            <p class="section-subtitle">Solusi lengkap untuk kebutuhan branding dan visual Anda</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3 class="service-title">Desain UI/UX</h3>
-                    <p class="service-description">Menciptakan pengalaman digital yang intuitif dan engaging untuk web dan aplikasi mobile.</p>
-                    <a href="services/ui-ux.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <h3 class="service-title">Identitas Merek</h3>
-                    <p class="service-description">Membangun sistem visual yang kohesif dan memorable yang mencerminkan esensi brand Anda.</p>
-                    <a href="services/branding.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
-                </div>
-                
-                <div class="service-card">
-                    <h3 class="service-title">Desain Grafis</h3>
-                    <p class="service-description">Solusi visual untuk cetak dan digital, dari brosur hingga konten media sosial.</p>
-                    <a href="services/graphic-design.html" class="service-link">Pelajari lebih lanjut <i class="fas fa-arrow-right"></i></a>
+        <!-- Client Logos -->
+        <section class="clients-section" aria-labelledby="clients-title">
+            <div class="container">
+                <h2 id="clients-title" class="section-title" data-aos="fade-up">Dipercaya oleh Perusahaan Terkemuka</h2>
+                <div class="clients-grid">
+                    <!-- Client logos akan diisi dengan JS -->
                 </div>
             </div>
-            
-            <div class="section-cta">
-                <a href="services/index.html" class="btn btn-outline">Lihat Semua Layanan</a>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services-section" aria-labelledby="services-title">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Layanan Kami</span>
+                    <h2 id="services-title" class="section-title">Solusi Desain Komprehensif untuk Bisnis Digital</h2>
+                    <p class="section-description">
+                        Kami menawarkan layanan end-to-end untuk transformasi digital bisnis Anda, dari strategi hingga eksekusi.
+                    </p>
+                </div>
+                
+                <div class="services-grid">
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <path d="M24 4L44 24L24 44L4 24L24 4Z" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="24" cy="24" r="8" stroke="#2563EB" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">UI/UX Design</h3>
+                        <p class="service-description">
+                            Desain pengalaman pengguna yang intuitif dan engaging untuk aplikasi mobile dan web.
+                        </p>
+                        <ul class="service-features">
+                            <li>User Research & Testing</li>
+                            <li>Wireframing & Prototyping</li>
+                            <li>Design Systems</li>
+                            <li>Usability Audit</li>
+                        </ul>
+                        <a href="/services/ui-ux-design/" class="service-link" aria-label="Pelajari lebih lanjut tentang UI/UX Design">
+                            Pelajari Selengkapnya
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <path d="M24 8C15.16 8 8 15.16 8 24C8 32.84 15.16 40 24 40C32.84 40 40 32.84 40 24C40 15.16 32.84 8 24 8Z" stroke="#2563EB" stroke-width="2"/>
+                                <path d="M24 16V24L28 28" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Brand Identity</h3>
+                        <p class="service-description">
+                            Bangun identitas merek yang kuat dan konsisten di semua platform digital dan cetak.
+                        </p>
+                        <ul class="service-features">
+                            <li>Logo & Visual Identity</li>
+                            <li>Brand Guidelines</li>
+                            <li>Brand Strategy</li>
+                            <li>Brand Messaging</li>
+                        </ul>
+                        <a href="/services/brand-identity/" class="service-link" aria-label="Pelajari lebih lanjut tentang Brand Identity">
+                            Pelajari Selengkapnya
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </article>
+                    
+                    <article class="service-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="service-icon">
+                            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" aria-hidden="true">
+                                <rect x="8" y="8" width="32" height="32" rx="4" stroke="#2563EB" stroke-width="2"/>
+                                <path d="M16 16L32 32" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M32 16L16 32" stroke="#2563EB" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <h3 class="service-title">Web Development</h3>
+                        <p class="service-description">
+                            Pengembangan website responsif dan performa tinggi dengan teknologi terbaru.
+                        </p>
+                        <ul class="service-features">
+                            <li>Responsive Development</li>
+                            <li>E-commerce Solutions</li>
+                            <li>Web Performance</li>
+                            <li>CMS Integration</li>
+                        </ul>
+                        <a href="/services/web-development/" class="service-link" aria-label="Pelajari lebih lanjut tentang Web Development">
+                            Pelajari Selengkapnya
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                                <path d="M4 10H16M16 10L10 4M16 10L10 16" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                    </article>
+                </div>
+                
+                <div class="section-cta" data-aos="fade-up">
+                    <a href="/services/" class="btn btn-outline">
+                        Lihat Semua Layanan
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- Portfolio Showcase -->
+        <section class="portfolio-showcase" aria-labelledby="portfolio-title">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Portfolio</span>
+                    <h2 id="portfolio-title" class="section-title">Karya yang Membanggakan</h2>
+                    <p class="section-description">
+                        Lihat bagaimana kami membantu klien mencapai tujuan bisnis mereka melalui desain yang efektif.
+                    </p>
+                </div>
+                
+                <div class="portfolio-grid">
+                    <article class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="portfolio-image">
+                            <img src="/assets/images/portfolio/fintech-dashboard.jpg" alt="Dashboard Aplikasi Fintech - UI/UX Design" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">UI/UX Design</span>
+                            <h3 class="portfolio-title">Fintech Dashboard Redesign</h3>
+                            <p class="portfolio-description">
+                                Redesign dashboard untuk aplikasi fintech yang meningkatkan user engagement sebesar 45%.
+                            </p>
+                            <a href="/portfolio/fintech-dashboard/" class="portfolio-link" aria-label="Lihat case study Fintech Dashboard">
+                                Lihat Case Study
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+                        <div class="portfolio-image">
+                            <img src="/assets/images/portfolio/ecommerce-branding.jpg" alt="Brand Identity E-commerce - Branding" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Brand Identity</span>
+                            <h3 class="portfolio-title">E-commerce Brand Identity</h3>
+                            <p class="portfolio-description">
+                                Pengembangan identitas merek lengkap untuk platform e-commerce fashion lokal.
+                            </p>
+                            <a href="/portfolio/ecommerce-branding/" class="portfolio-link" aria-label="Lihat case study E-commerce Branding">
+                                Lihat Case Study
+                            </a>
+                        </div>
+                    </article>
+                    
+                    <article class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+                        <div class="portfolio-image">
+                            <img src="/assets/images/portfolio/corporate-website.jpg" alt="Website Perusahaan - Web Development" loading="lazy">
+                        </div>
+                        <div class="portfolio-content">
+                            <span class="portfolio-category">Web Development</span>
+                            <h3 class="portfolio-title">Corporate Website Redesign</h3>
+                            <p class="portfolio-description">
+                                Redesign website perusahaan dengan fokus pada performance dan user experience.
+                            </p>
+                            <a href="/portfolio/corporate-website/" class="portfolio-link" aria-label="Lihat case study Corporate Website">
+                                Lihat Case Study
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="section-cta" data-aos="fade-up">
+                    <a href="/portfolio/" class="btn btn-outline">
+                        Lihat Semua Portfolio
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process-section" aria-labelledby="process-title">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Proses Kami</span>
+                    <h2 id="process-title" class="section-title">Pendekatan Terstruktur untuk Hasil Optimal</h2>
+                    <p class="section-description">
+                        Metodologi kami yang terbukti memastikan setiap proyek berjalan dengan lancar dan memberikan hasil yang maksimal.
+                    </p>
+                </div>
+                
+                <div class="process-timeline">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">01</div>
+                        <h3 class="step-title">Discovery & Research</h3>
+                        <p class="step-description">
+                            Memahami bisnis, audiens, dan tujuan proyek melalui riset mendalam dan analisis kompetitor.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">02</div>
+                        <h3 class="step-title">Strategy & Planning</h3>
+                        <p class="step-description">
+                            Mengembangkan strategi desain dan rencana eksekusi berdasarkan insight dari tahap research.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">03</div>
+                        <h3 class="step-title">Design & Development</h3>
+                        <p class="step-description">
+                            Eksekusi desain dan pengembangan dengan iterasi berdasarkan feedback berkala.
+                        </p>
+                    </div>
+                    
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">04</div>
+                        <h3 class="step-title">Launch & Optimize</h3>
+                        <p class="step-description">
+                            Peluncuran dan monitoring performa dengan optimasi berkelanjutan untuk hasil terbaik.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials-section" aria-labelledby="testimonials-title">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-label">Testimoni</span>
+                    <h2 id="testimonials-title" class="section-title">Apa Kata Klien Kami</h2>
+                </div>
+                
+                <div class="testimonials-slider">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "Principles of Design Studio membantu kami meningkatkan konversi website sebesar 65%. Pendekatan berbasis data mereka benar-benar membuat perbedaan."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="/assets/images/testimonials/client-1.jpg" alt="Foto Sarah Wijaya" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Sarah Wijaya</h4>
+                                <p class="author-role">Marketing Director, TechCorp Indonesia</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="testimonial-content">
+                            <p class="testimonial-text">
+                                "Proses kerja yang sangat profesional dan komunikasi yang transparan. Hasil desain UI/UX aplikasi kami melebihi ekspektasi."
+                            </p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">
+                                <img src="/assets/images/testimonials/client-2.jpg" alt="Foto Andi Pratama" loading="lazy">
+                            </div>
+                            <div class="author-info">
+                                <h4 class="author-name">Andi Pratama</h4>
+                                <p class="author-role">CEO, Finova Startup</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 id="cta-title" class="cta-title">Siap Transformasi Bisnis Digital Anda?</h2>
+                    <p class="cta-description">
+                        Jadwalkan konsultasi gratis dengan tim ahli kami dan dapatkan proposal desain khusus untuk kebutuhan bisnis Anda.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="/contact/consultation/" class="btn btn-primary btn-lg">
+                            Jadwalkan Konsultasi Gratis
+                        </a>
+                        <a href="tel:+6281234567890" class="btn btn-outline btn-lg">
+                            Hubungi Kami
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-grid">
                 <div class="footer-brand">
-                    <a href="index.html" class="logo footer-logo">
-                        <span class="logo-icon">{"}</span>
-                        <span class="logo-text">PrinciplesOfDesign</span>
+                    <a href="/" class="footer-logo" aria-label="Principles of Design Studio">
+                        <svg class="logo-icon" width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+                            <path d="M16 0L32 16L16 32L0 16L16 0Z" fill="white"/>
+                            <circle cx="16" cy="16" r="6" fill="#2563EB"/>
+                        </svg>
+                        <span class="logo-text">
+                            <span class="logo-primary">Principles</span>
+                            <span class="logo-secondary">of Design</span>
+                        </span>
                     </a>
-                    <p class="footer-tagline">Mengubah kompleksitas menjadi kejelasan melalui prinsip desain yang terencana.</p>
+                    <p class="footer-description">
+                        Studio desain profesional di Jakarta yang mengkhususkan diri dalam solusi digital berbasis data untuk transformasi bisnis.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com/principlesdesign" class="social-link" aria-label="Instagram" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M3 16V8C3 5.23858 5.23858 3 8 3H16C18.7614 3 21 5.23858 21 8V16C21 18.7614 18.7614 21 16 21H8C5.23858 21 3 18.7614 3 16Z" stroke="currentColor" stroke-width="2"/>
+                                <circle cx="17.5" cy="6.5" r="0.5" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://dribbble.com/principlesdesign" class="social-link" aria-label="Dribbble" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="2"/>
+                                <path d="M16 6C14.5 7.5 13.5 9.5 13 12C12.5 14.5 12.5 16.5 13 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M8 6C9.5 7.5 10.5 9.5 11 12C11.5 14.5 11.5 16.5 11 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 5C13 7 13 9 12 12C11 15 11 17 12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/company/principlesdesign" class="social-link" aria-label="LinkedIn" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <circle cx="4" cy="5" r="2" stroke="currentColor" stroke-width="2"/>
+                            </svg>
+                        </a>
+                        <a href="https://behance.net/principlesdesign" class="social-link" aria-label="Behance" rel="noopener noreferrer">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                                <path d="M21 12H15M21 12C21 9.79086 19.2091 8 17 8H12V16H17C19.2091 16 21 14.2091 21 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M3 12H9M9 12C9 9.79086 7.20914 8 5 8H3V16H5C7.20914 16 9 14.2091 9 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M12 8H15C16.1046 8 17 7.10457 17 6C17 4.89543 16.1046 4 15 4H12V8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </a>
+                    </div>
                 </div>
                 
                 <div class="footer-links">
-                    <div class="footer-link-group">
-                        <h4 class="footer-link-title">Studio</h4>
-                        <ul>
-                            <li><a href="about/index.html">Tentang Kami</a></li>
-                            <li><a href="team/index.html">Tim Kami</a></li>
-                            <li><a href="careers/index.html">Karir</a></li>
+                    <div class="link-group">
+                        <h3 class="link-group-title">Layanan</h3>
+                        <ul class="link-list">
+                            <li><a href="/services/ui-ux-design/">UI/UX Design</a></li>
+                            <li><a href="/services/brand-identity/">Brand Identity</a></li>
+                            <li><a href="/services/web-development/">Web Development</a></li>
+                            <li><a href="/services/graphic-design/">Graphic Design</a></li>
                         </ul>
                     </div>
                     
-                    <div class="footer-link-group">
-                        <h4 class="footer-link-title">Layanan</h4>
-                        <ul>
-                            <li><a href="services/ui-ux.html">UI/UX Design</a></li>
-                            <li><a href="services/branding.html">Branding</a></li>
-                            <li><a href="services/graphic-design.html">Desain Grafis</a></li>
+                    <div class="link-group">
+                        <h3 class="link-group-title">Perusahaan</h3>
+                        <ul class="link-list">
+                            <li><a href="/about/">Tentang Kami</a></li>
+                            <li><a href="/about/team/">Tim Kami</a></li>
+                            <li><a href="/about/careers/">Karir</a></li>
+                            <li><a href="/about/values/">Nilai Kami</a></li>
                         </ul>
                     </div>
                     
-                    <div class="footer-link-group">
-                        <h4 class="footer-link-title">Kontak</h4>
-                        <ul>
-                            <li><a href="contact/index.html">Formulir Kontak</a></li>
-                            <li><a href="mailto:info@principlesofdesign.studio">info@principlesofdesign.studio</a></li>
-                            <li><a href="tel:+621234567890">+62 123 4567 890</a></li>
+                    <div class="link-group">
+                        <h3 class="link-group-title">Resources</h3>
+                        <ul class="link-list">
+                            <li><a href="/insights/">Blog & Insights</a></li>
+                            <li><a href="/portfolio/">Portfolio</a></li>
+                            <li><a href="/resources/guides/">Panduan Gratis</a></li>
+                            <li><a href="/contact/">Hubungi Kami</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h3 class="link-group-title">Kontak</h3>
+                        <ul class="link-list">
+                            <li>
+                                <a href="mailto:hello@principlesdesign.studio">
+                                    hello@principlesdesign.studio
+                                </a>
+                            </li>
+                            <li>
+                                <a href="tel:+6281234567890">
+                                    +62 812 3456 7890
+                                </a>
+                            </li>
+                            <li>
+                                <span>Jakarta Design Center</span>
+                                <span>Jl. Sudirman No. 123</span>
+                                <span>Jakarta Selatan 12190</span>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p class="copyright">&copy; 2026 Principles of Design Studio. Semua hak dilindungi.</p>
-                <div class="footer-social">
-                    <a href="https://instagram.com" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://dribbble.com" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
-                    <a href="https://behance.net" aria-label="Behance"><i class="fab fa-behance"></i></a>
-                    <a href="https://linkedin.com" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <div class="footer-legal">
+                    <p>&copy; <span id="current-year"></span> Principles of Design Studio. All rights reserved.</p>
+                    <ul class="legal-links">
+                        <li><a href="/privacy-policy/">Privacy Policy</a></li>
+                        <li><a href="/terms-of-service/">Terms of Service</a></li>
+                        <li><a href="/sitemap/">Sitemap</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
     </footer>
 
-    <!-- JavaScript -->
-    <script src="js/script.js"></script>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="/js/main.js" defer></script>
+    
+    <!-- Schema Markup for Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Principles of Design Studio",
+        "url": "https://principlesofdesign.studio",
+        "logo": "https://principlesofdesign.studio/assets/images/logo.svg",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+62-812-3456-7890",
+            "contactType": "Customer Service",
+            "availableLanguage": ["Indonesian", "English"]
+        }
+    }
+    </script>
+    
+    <!-- Schema Markup for WebSite -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "url": "https://principlesofdesign.studio",
+        "name": "Principles of Design Studio",
+        "description": "Studio desain profesional di Jakarta spesialis UI/UX, branding, dan web development.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Principles of Design Studio"
+        }
+    }
+    </script>
 </body>
 </html>
