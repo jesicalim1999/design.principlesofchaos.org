@@ -1,27 +1,119 @@
+# Principles of Design Studio - Robots.txt
+# Last Updated: 2026-01-31
+# Contact: hello@principlesofchaos.org
+
 User-agent: *
 Allow: /
 Disallow: /admin/
+Disallow: /cgi-bin/
 Disallow: /private/
-Disallow: /api/
+Disallow: /tmp/
+Disallow: /wp-admin/
+Disallow: /wp-includes/
 Disallow: /search/
+Disallow: /?s=
+Disallow: /*?s=
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
 
-Sitemap: https://principlesofdesign.studio/sitemap.xml
+# Sitemap Location
+Sitemap: https://design.principlesofchaos.org/sitemap.xml
+Sitemap: https://design.principlesofchaos.org/sitemap-index.xml
 
-# Google-specific
-User-agent: Googlebot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# Bing-specific
-User-agent: bingbot
-Allow: /
-Disallow: /admin/
-Disallow: /private/
-
-# Crawl-delay untuk mencegah overload
+# Crawl Delay (untuk menghindari server overload)
 Crawl-delay: 2
 
-# Clean params untuk menghindari duplicate content
+# Specific Bots Rules
+User-agent: Googlebot
+Allow: /
+Disallow: /private/
+Crawl-delay: 1
+
+User-agent: Googlebot-Image
+Allow: /images/
+Allow: /uploads/
+Disallow: /images/private/
+Disallow: /uploads/temp/
+
+User-agent: Bingbot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Disallow: /admin/
+Crawl-delay: 3
+
+User-agent: Baiduspider
+Allow: /
+Disallow: /admin/
+Crawl-delay: 5
+
+User-agent: Slurp
+Allow: /
+Disallow: /private/
+Crawl-delay: 3
+
+# Block Bad Bots
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SEMrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: MauiBot
+Disallow: /
+
+User-agent: BlexBot
+Disallow: /
+
+User-agent: Ezooms
+Disallow: /
+
+User-agent: YandexImages
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Development/Staging Environment Block
+User-agent: *
+Disallow: /staging/
+Disallow: /dev/
+Disallow: /test/
+Disallow: /beta/
+
+# Parameter Handling untuk Search Engines
+# Tandai parameter yang tidak mengubah konten
+# URL dengan parameter ini akan dianggap duplicate content
+# Sesuaikan dengan CMS/Website yang digunakan
+
+# Contoh untuk URL tracking parameters:
+# Disallow: /*?utm_
+# Disallow: /*?fbclid=
+# Disallow: /*?gclid=
+
+# Clean URLs preferred
 Clean-param: ref /blog/
-Clean-param: source /portfolio/
+Clean-param: source /case-studies/
+Clean-param: sessionid /
+Clean-param: sid /
+Clean-param: phpsessid /
+
+# Host Directive (jika menggunakan www/non-www)
+# Host: design.principlesofchaos.org
+
+# Visit-time (jika ingin membatasi waktu crawling)
+# Visit-time: 0100-0500
