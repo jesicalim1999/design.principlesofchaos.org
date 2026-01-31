@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Desain | Principles of Design Studio</title>
+    <meta name="description" content="Artikel dan insight tentang desain, kreativitas, UI/UX, branding, dan tren desain terkini. Tips dan panduan praktis dari para ahli desain kami.">
+    <meta name="keywords" content="blog desain, artikel desain, tips UI/UX, tren desain, kreativitas, tutorial desain, inspirasi desain">
+    <meta name="author" content="Principles of Design Studio">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ff 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+            margin-top: 3rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .blog-image {
+            height: 200px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.25rem;
+        }
+        
+        .blog-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-light);
+            font-size: 0.875rem;
+            margin-bottom: 1rem;
+        }
+        
+        .blog-category {
+            background: var(--bg-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .blog-title {
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+        
+        .blog-excerpt {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .blog-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .blog-link:hover {
+            gap: 1rem;
+        }
+        
+        .blog-sidebar {
+            margin-top: 4rem;
+        }
+        
+        .sidebar-section {
+            background: var(--bg-light);
+            padding: 2rem;
+            border-radius: var(--radius);
+            margin-bottom: 2rem;
+        }
+        
+        .sidebar-title {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-color);
+        }
+        
+        .categories-list {
+            list-style: none;
+        }
+        
+        .categories-list li {
+            margin-bottom: 0.75rem;
+        }
+        
+        .categories-list a {
+            color: var(--text-color);
+            text-decoration: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .categories-list a:hover {
+            color: var(--primary-color);
+        }
+        
+        .category-count {
+            background: var(--primary-color);
+            color: white;
+            padding: 0.125rem 0.5rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+        }
+        
+        .pagination {
+            display: flex;
+            justify-content: center;
+            margin-top: 4rem;
+            gap: 0.5rem;
+        }
+        
+        .page-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: var(--radius);
+            background: white;
+            color: var(--text-color);
+            text-decoration: none;
+            font-weight: 600;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .page-link:hover, .page-link.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        @media (min-width: 992px) {
+            .blog-container {
+                display: grid;
+                grid-template-columns: 2fr 1fr;
+                gap: 4rem;
+            }
+            
+            .blog-sidebar {
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">{"}</span>
+                <span class="logo-text">PrinciplesOfDesign</span>
+            </a>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../services/index.html">Layanan</a></li>
+                <li><a href="../principles/index.html">Prinsip</a></li>
+                <li><a href="index.html" class="active">Blog</a></li>
+                <li><a href="../contact/index.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="container">
+            <h1>Blog Desain</h1>
+            <p class="page-subtitle">Insight, tips, dan tren terbaru dalam dunia desain dari tim kreatif kami</p>
+        </div>
+    </header>
+
+    <section class="blog-section">
+        <div class="container">
+            <div class="blog-container">
+                <div class="blog-main">
+                    <div class="blog-grid">
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                UI/UX Trends 2026
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">15 Maret 2026</span>
+                                    <span class="blog-category">UI/UX</span>
+                                </div>
+                                <h3 class="blog-title">Tren UI/UX 2026: Apa yang Perlu Dipersiapkan?</h3>
+                                <p class="blog-excerpt">Eksplorasi mendalam tentang tren desain interface dan pengalaman pengguna yang akan mendominasi tahun depan, dari AI integration hingga immersive experiences.</p>
+                                <a href="article-1.html" class="blog-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                Color Psychology
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">8 Maret 2026</span>
+                                    <span class="blog-category">Theory</span>
+                                </div>
+                                <h3 class="blog-title">Psikologi Warna dalam Branding: Lebih dari Sekadar Estetika</h3>
+                                <p class="blog-excerpt">Bagaimana pemilihan warna yang tepat dapat mempengaruhi persepsi merek, emosi konsumen, dan bahkan keputusan pembelian. Panduan praktis untuk memilih palet warna.</p>
+                                <a href="article-2.html" class="blog-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                Design Systems
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">1 Maret 2026</span>
+                                    <span class="blog-category">Process</span>
+                                </div>
+                                <h3 class="blog-title">Membangun Design System yang Scalable untuk Startup</h3>
+                                <p class="blog-excerpt">Langkah-langkah praktis untuk membuat design system yang dapat tumbuh bersama bisnis Anda, menghemat waktu, dan menjaga konsistensi di seluruh produk.</p>
+                                <a href="article-3.html" class="blog-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                Accessibility Guide
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">22 Februari 2026</span>
+                                    <span class="blog-category">UI/UX</span>
+                                </div>
+                                <h3 class="blog-title">Desain Inklusif: Panduan Aksesibilitas untuk Desainer</h3>
+                                <p class="blog-excerpt">Prinsip-prinsip aksesibilitas yang harus diterapkan dalam setiap proyek desain. Membuat produk yang dapat diakses oleh semua orang bukanlah opsi, tapi keharusan.</p>
+                                <a href="article-4.html" class="blog-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                Creative Process
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">15 Februari 2026</span>
+                                    <span class="blog-category">Creativity</span>
+                                </div>
+                                <h3 class="blog-title">Mengatasi Creative Block: Strategi untuk Desainer</h3>
+                                <p class="blog-excerpt">Setiap desainer pernah mengalami creative block. Artikel ini membagikan teknik dan pendekatan yang telah terbukti untuk mengatasi kebuntuan kreatif.</p>
+                                <a href="article-5.html" class="blog-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                Typography Rules
+                            </div>
+                            <div class="blog-content">
+                                <div class="blog-meta">
+                                    <span class="blog-date">8 Februari 2026</span>
+                                    <span class="blog-category">Typography</span>
+                                </div>
+                                <h3 class="blog-title">Aturan Tipografi yang Sering Diabaikan (dan Cara Memperbaikinya)</h3>
+                                <p class="blog-excerpt">Kesalahan tipografi umum yang dapat merusak desain yang baik, dan cara sederhana untuk memperbaikinya. Dari leading hingga kerning, semua dibahas di sini.</p>
+                                <a href="article-6.html" class="blog-link">Baca Selengkapnya <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <div class="pagination">
+                        <a href="#" class="page-link active">1</a>
+                        <a href="#" class="page-link">2</a>
+                        <a href="#" class="page-link">3</a>
+                        <a href="#" class="page-link">4</a>
+                        <a href="#" class="page-link"><i class="fas fa-chevron-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="blog-sidebar">
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Kategori</h3>
+                        <ul class="categories-list">
+                            <li><a href="#">UI/UX Design <span class="category-count">12</span></a></li>
+                            <li><a href="#">Branding <span class="category-count">8</span></a></li>
+                            <li><a href="#">Desain Grafis <span class="category-count">6</span></a></li>
+                            <li><a href="#">Teori Desain <span class="category-count">10</span></a></li>
+                            <li><a href="#">Proses Kreatif <span class="category-count">7</span></a></li>
+                            <li><a href="#">Tren & Inspirasi <span class="category-count">9</span></a></li>
+                            <li><a href="#">Tips & Tutorial <span class="category-count">15</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Artikel Populer</h3>
+                        <div class="popular-posts">
+                            <div class="popular-post">
+                                <h4><a href="#">10 Tools Desain yang Wajib Dikuasai di 2026</a></h4>
+                                <span class="post-date">10 Maret 2026</span>
+                            </div>
+                            <div class="popular-post">
+                                <h4><a href="#">Case Study: Redesign Aplikasi yang Meningkatkan Konversi 300%</a></h4>
+                                <span class="post-date">3 Maret 2026</span>
+                            </div>
+                            <div class="popular-post">
+                                <h4><a href="#">Bagaimana Membuat Portfolio Desain yang Menarik Perhatian Client</a></h4>
+                                <span class="post-date">24 Februari 2026</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-section">
+                        <h3 class="sidebar-title">Newsletter</h3>
+                        <p>Dapatkan artikel terbaru langsung di inbox Anda. Tidak ada spam, hanya konten berkualitas.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Email Anda" required>
+                            <button type="submit" class="btn btn-primary">Berlangganan</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">
+                        <span class="logo-icon">{"}</span>
+                        <span class="logo-text">PrinciplesOfDesign</span>
+                    </a>
+                    <p class="footer-tagline">Mengubah kompleksitas menjadi kejelasan melalui prinsip desain yang terencana.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="../about/index.html">Tentang Kami</a></li>
+                            <li><a href="../team/index.html">Tim Kami</a></li>
+                            <li><a href="../careers/index.html">Karir</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Layanan</h4>
+                        <ul>
+                            <li><a href="../services/ui-ux.html">UI/UX Design</a></li>
+                            <li><a href="../services/branding.html">Branding</a></li>
+                            <li><a href="../services/graphic-design.html">Desain Grafis</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li><a href="../contact/index.html">Formulir Kontak</a></li>
+                            <li><a href="mailto:info@principlesofdesign.studio">Email Kami</a></li>
+                            <li><a href="tel:+621234567890">Telepon</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Principles of Design Studio. Semua hak dilindungi.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
