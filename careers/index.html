@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karir & Lowongan | Principles of Design Studio</title>
+    <meta name="description" content="Bergabunglah dengan tim kreatif kami. Lihat lowongan kerja di Principles of Design Studio untuk posisi desainer UI/UX, graphic designer, strategist, dan lainnya.">
+    <meta name="keywords" content="lowongan desain, karir desain, pekerjaan UI/UX, graphic designer jobs, creative career, rekrutmen desainer">
+    <meta name="author" content="Principles of Design Studio">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .careers-hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ff 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .benefits-section {
+            padding: 6rem 0;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .benefit-card {
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .benefit-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .benefit-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 1.5rem;
+        }
+        
+        .openings-section {
+            background: var(--bg-light);
+            padding: 6rem 0;
+        }
+        
+        .job-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            flex-wrap: wrap;
+        }
+        
+        .job-filter {
+            background: white;
+            border: 2px solid var(--border-color);
+            padding: 0.75rem 1.5rem;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: var(--transition);
+            font-weight: 600;
+        }
+        
+        .job-filter:hover, .job-filter.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+        
+        .job-listings {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .job-card {
+            background: white;
+            border-radius: var(--radius);
+            padding: 2.5rem;
+            margin-bottom: 1.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+        }
+        
+        .job-tags {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        
+        .job-tag {
+            background: var(--bg-light);
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        
+        .job-type {
+            background: var(--primary-color);
+            color: white;
+        }
+        
+        .job-description {
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .job-requirements {
+            margin-bottom: 2rem;
+        }
+        
+        .requirements-list {
+            list-style: none;
+            margin-top: 1rem;
+        }
+        
+        .requirements-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .requirements-list li::before {
+            content: '•';
+            color: var(--primary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .application-section {
+            padding: 6rem 0;
+        }
+        
+        .application-form {
+            max-width: 600px;
+            margin: 3rem auto 0;
+            background: white;
+            padding: 3rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            font-family: inherit;
+            font-size: 1rem;
+        }
+        
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+        }
+        
+        .file-upload {
+            border: 2px dashed var(--border-color);
+            padding: 2rem;
+            text-align: center;
+            border-radius: var(--radius);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .file-upload:hover {
+            border-color: var(--primary-color);
+        }
+        
+        .no-openings {
+            text-align: center;
+            padding: 4rem;
+            background: white;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">{"}</span>
+                <span class="logo-text">PrinciplesOfDesign</span>
+            </a>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../services/index.html">Layanan</a></li>
+                <li><a href="../principles/index.html">Prinsip</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="../about/index.html">Tentang Kami</a></li>
+                <li><a href="../team/index.html">Tim Kami</a></li>
+                <li><a href="index.html" class="active">Karir</a></li>
+                <li><a href="../contact/index.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="careers-hero">
+        <div class="container">
+            <h1>Karir di Principles of Design</h1>
+            <p class="page-subtitle">Bergabunglah dengan tim kreatif yang bersemangat menciptakan solusi desain yang berdampak dan bermakna</p>
+        </div>
+    </header>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Mengapa Bekerja di Sini?</h2>
+            <p class="section-subtitle">Kami menciptakan lingkungan yang mendukung kreativitas, pembelajaran, dan pertumbuhan profesional</p>
+            
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Proyek yang Menantang</h3>
+                    <p>Bekerja pada proyek-proyek menarik dengan klien beragam, dari startup hingga perusahaan besar.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Pengembangan Terus Menerus</h3>
+                    <p>Anggaran pelatihan tahunan, workshop rutin, dan akses ke konferensi desain terkemuka.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Work-Life Balance</h3>
+                    <p>Fleksibilitas kerja, remote work options, dan lingkungan kerja yang sehat dan supportive.</p>
+                </div>
+                
+                <div class="benefit-card">
+                    <div class="benefit-icon">
+                        <i class="fas fa-tools"></i>
+                    </div>
+                    <h3>Tools Terbaik</h3>
+                    <p>Akses ke software dan hardware desain terbaru untuk mendukung pekerjaan Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="openings-section">
+        <div class="container">
+            <h2 class="section-title">Lowongan Terbuka</h2>
+            <p class="section-subtitle">Temukan posisi yang sesuai dengan keterampilan dan passion Anda</p>
+            
+            <div class="job-filters">
+                <button class="job-filter active" data-filter="all">Semua Posisi</button>
+                <button class="job-filter" data-filter="design">Desain</button>
+                <button class="job-filter" data-filter="strategy">Strategi</button>
+                <button class="job-filter" data-filter="internship">Internship</button>
+            </div>
+            
+            <div class="job-listings">
+                <div class="job-card" data-category="design">
+                    <div class="job-header">
+                        <div>
+                            <h3>UI/UX Designer</h3>
+                            <p>Jakarta / Hybrid</p>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag job-type">Full-time</span>
+                            <span class="job-tag">Senior</span>
+                        </div>
+                    </div>
+                    
+                    <p class="job-description">Kami mencari UI/UX Designer berpengalaman untuk bergabung dengan tim produk digital kami. Anda akan bertanggung jawab untuk merancang pengalaman pengguna yang luar biasa untuk aplikasi web dan mobile.</p>
+                    
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>3+ tahun pengalaman sebagai UI/UX Designer</li>
+                            <li>Portfolio yang menunjukkan proses desain dari research hingga final design</li>
+                            <li>Mahir dengan Figma, Sketch, atau Adobe XD</li>
+                            <li>Pemahaman kuat tentang prinsip UX dan design systems</li>
+                            <li>Pengalaman dengan user research dan usability testing</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#apply-form" class="btn btn-primary">Lamar Posisi Ini</a>
+                </div>
+                
+                <div class="job-card" data-category="design">
+                    <div class="job-header">
+                        <div>
+                            <h3>Graphic Designer</h3>
+                            <p>Jakarta / On-site</p>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag job-type">Full-time</span>
+                            <span class="job-tag">Mid-level</span>
+                        </div>
+                    </div>
+                    
+                    <p class="job-description">Bergabunglah dengan tim desain grafis kami untuk menciptakan solusi visual yang menarik untuk berbagai media, dari digital hingga print. Anda akan bekerja pada proyek branding, marketing materials, dan social media content.</p>
+                    
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>2+ tahun pengalaman sebagai Graphic Designer</li>
+                            <li>Mahir dengan Adobe Creative Suite (Illustrator, Photoshop, InDesign)</li>
+                            <li>Pemahaman kuat tentang tipografi, layout, dan teori warna</li>
+                            <li>Pengalaman dengan branding dan visual identity systems</li>
+                            <li>Kemampuan untuk bekerja pada beberapa proyek sekaligus</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#apply-form" class="btn btn-primary">Lamar Posisi Ini</a>
+                </div>
+                
+                <div class="job-card" data-category="strategy">
+                    <div class="job-header">
+                        <div>
+                            <h3>Brand Strategist</h3>
+                            <p>Remote / Hybrid</p>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag job-type">Full-time</span>
+                            <span class="job-tag">Senior</span>
+                        </div>
+                    </div>
+                    
+                    <p class="job-description">Kami mencari Brand Strategist yang dapat membantu klien mengembangkan positioning merek yang kuat dan strategi komunikasi yang efektif. Anda akan bekerja langsung dengan klien untuk memahami bisnis mereka dan menciptakan solusi branding yang berdampak.</p>
+                    
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>4+ tahun pengalaman dalam brand strategy atau marketing</li>
+                            <li>Pemahaman mendalam tentang brand development process</li>
+                            <li>Kemampuan analisis yang kuat dan berpikir strategis</li>
+                            <li>Pengalaman dengan market research dan competitive analysis</li>
+                            <li>Kemampuan presentasi dan komunikasi yang excellent</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#apply-form" class="btn btn-primary">Lamar Posisi Ini</a>
+                </div>
+                
+                <div class="job-card" data-category="internship">
+                    <div class="job-header">
+                        <div>
+                            <h3>Design Intern</h3>
+                            <p>Jakarta / On-site</p>
+                        </div>
+                        <div class="job-tags">
+                            <span class="job-tag job-type">Internship</span>
+                            <span class="job-tag">Entry-level</span>
+                        </div>
+                    </div>
+                    
+                    <p class="job-description">Program internship 3-6 bulan untuk mahasiswa atau fresh graduate yang ingin mendapatkan pengalaman langsung di studio desain profesional. Anda akan bekerja di bawah bimbingan senior designer pada proyek-proyek nyata.</p>
+                    
+                    <div class="job-requirements">
+                        <h4>Requirements:</h4>
+                        <ul class="requirements-list">
+                            <li>Mahasiswa aktif atau fresh graduate jurusan desain</li>
+                            <li>Portfolio yang menunjukkan kemampuan dasar desain</li>
+                            <li>Familiar dengan tools desain dasar (Figma, Adobe Creative Suite)</li>
+                            <li>Semangat belajar dan kemampuan beradaptasi yang baik</li>
+                            <li>Ketersediaan minimal 3 bulan</li>
+                        </ul>
+                    </div>
+                    
+                    <a href="#apply-form" class="btn btn-primary">Lamar Posisi Ini</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="application-section" id="apply-form">
+        <div class="container">
+            <h2 class="section-title">Kirim Lamaran Anda</h2>
+            <p class="section-subtitle">Siap bergabung dengan tim kami? Isi formulir di bawah ini</p>
+            
+            <div class="application-form">
+                <form id="career-form">
+                    <div class="form-group">
+                        <label class="form-label" for="position">Posisi yang Dilamar *</label>
+                        <select class="form-control" id="position" name="position" required>
+                            <option value="">Pilih posisi...</option>
+                            <option value="ui-ux-designer">UI/UX Designer</option>
+                            <option value="graphic-designer">Graphic Designer</option>
+                            <option value="brand-strategist">Brand Strategist</option>
+                            <option value="design-intern">Design Intern</option>
+                            <option value="other">Lainnya</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="full-name">Nama Lengkap *</label>
+                        <input type="text" class="form-control" id="full-name" name="full-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email *</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="phone">Nomor Telepon</label>
+                        <input type="tel" class="form-control" id="phone" name="phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="portfolio">Portfolio/LinkedIn URL *</label>
+                        <input type="url" class="form-control" id="portfolio" name="portfolio" required placeholder="https://">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Unggah CV & Cover Letter *</label>
+                        <div class="file-upload" id="file-upload-area">
+                            <i class="fas fa-cloud-upload-alt" style="font-size: 2rem; margin-bottom: 1rem; color: var(--text-light);"></i>
+                            <p>Drag & drop file di sini atau klik untuk memilih</p>
+                            <p style="font-size: 0.875rem; color: var(--text-light);">Format: PDF, DOC, DOCX (Maks: 5MB)</p>
+                            <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" style="display: none;">
+                        </div>
+                        <div id="file-name" style="margin-top: 0.5rem; font-size: 0.875rem;"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label" for="message">Pesan Tambahan</label>
+                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Ceritakan mengapa Anda tertarik dengan posisi ini dan apa yang membuat Anda cocok..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Kirim Lamaran</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">
+                        <span class="logo-icon">{"}</span>
+                        <span class="logo-text">PrinciplesOfDesign</span>
+                    </a>
+                    <p class="footer-tagline">Mengubah kompleksitas menjadi kejelasan melalui prinsip desain yang terencana.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="../about/index.html">Tentang Kami</a></li>
+                            <li><a href="../team/index.html">Tim Kami</a></li>
+                            <li><a href="index.html">Karir</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Layanan</h4>
+                        <ul>
+                            <li><a href="../services/ui-ux.html">UI/UX Design</a></li>
+                            <li><a href="../services/branding.html">Branding</a></li>
+                            <li><a href="../services/graphic-design.html">Desain Grafis</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li><a href="../contact/index.html">Formulir Kontak</a></li>
+                            <li><a href="mailto:info@principlesofdesign.studio">Email Kami</a></li>
+                            <li><a href="tel:+621234567890">Telepon</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Principles of Design Studio. Semua hak dilindungi.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script>
+        // Job filter functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filters = document.querySelectorAll('.job-filter');
+            const jobs = document.querySelectorAll('.job-card');
+            
+            filters.forEach(filter => {
+                filter.addEventListener('click', function() {
+                    // Remove active class from all filters
+                    filters.forEach(f => f.classList.remove('active'));
+                    
+                    // Add active class to clicked filter
+                    this.classList.add('active');
+                    
+                    const filterValue = this.getAttribute('data-filter');
+                    
+                    // Show/hide jobs based on filter
+                    jobs.forEach(job => {
+                        if (filterValue === 'all' || job.getAttribute('data-category') === filterValue) {
+                            job.style.display = 'block';
+                        } else {
+                            job.style.display = 'none';
+                        }
+                    });
+                });
+            });
+            
+            // File upload functionality
+            const fileUploadArea = document.getElementById('file-upload-area');
+            const fileInput = document.getElementById('resume');
+            const fileNameDisplay = document.getElementById('file-name');
+            
+            fileUploadArea.addEventListener('click', function() {
+                fileInput.click();
+            });
+            
+            fileInput.addEventListener('change', function() {
+                if (fileInput.files.length > 0) {
+                    fileNameDisplay.textContent = `File dipilih: ${fileInput.files[0].name}`;
+                    fileNameDisplay.style.color = 'var(--primary-color)';
+                } else {
+                    fileNameDisplay.textContent = '';
+                }
+            });
+            
+            // Drag and drop functionality
+            fileUploadArea.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                this.style.borderColor = 'var(--primary-color)';
+                this.style.backgroundColor = 'rgba(37, 99, 235, 0.05)';
+            });
+            
+            fileUploadArea.addEventListener('dragleave', function(e) {
+                e.preventDefault();
+                this.style.borderColor = 'var(--border-color)';
+                this.style.backgroundColor = 'transparent';
+            });
+            
+            fileUploadArea.addEventListener('drop', function(e) {
+                e.preventDefault();
+                this.style.borderColor = 'var(--border-color)';
+                this.style.backgroundColor = 'transparent';
+                
+                if (e.dataTransfer.files.length) {
+                    fileInput.files = e.dataTransfer.files;
+                    fileNameDisplay.textContent = `File dipilih: ${e.dataTransfer.files[0].name}`;
+                    fileNameDisplay.style.color = 'var(--primary-color)';
+                }
+            });
+            
+            // Form submission
+            document.getElementById('career-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // In a real application, you would send this data to a server
+                // For this example, we'll just show an alert
+                alert('Lamaran Anda telah berhasil dikirim! Kami akan menghubungi Anda dalam 5-7 hari kerja.');
+                this.reset();
+                fileNameDisplay.textContent = '';
+            });
+        });
+    </script>
+</body>
+</html>
