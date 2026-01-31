@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tentang Kami | Principles of Design Studio</title>
+    <meta name="description" content="Principles of Design Studio adalah studio desain profesional yang mengkhususkan diri pada prinsip desain yang berani, inovasi kreatif, dan solusi visual yang berdampak.">
+    <meta name="keywords" content="tentang kami, sejarah studio, visi misi, nilai-nilai, tim desain, studio kreatif">
+    <meta name="author" content="Principles of Design Studio">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .about-hero {
+            background: linear-gradient(135deg, #f0f9ff 0%, #fef7ff 100%);
+            padding: 8rem 0 4rem;
+            text-align: center;
+        }
+        
+        .story-section {
+            padding: 6rem 0;
+        }
+        
+        .story-timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 4rem auto 0;
+        }
+        
+        .story-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: var(--primary-color);
+            opacity: 0.3;
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4rem;
+            position: relative;
+        }
+        
+        .timeline-item:nth-child(odd) {
+            flex-direction: row-reverse;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            background: white;
+            padding: 2rem;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+        
+        .timeline-year {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            z-index: 1;
+        }
+        
+        .values-section {
+            background: var(--bg-light);
+            padding: 6rem 0;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .value-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: var(--radius);
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .value-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            color: white;
+            font-size: 2rem;
+        }
+        
+        .stats-section {
+            padding: 6rem 0;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .stat-item {
+            text-align: center;
+            padding: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            color: var(--text-light);
+            font-weight: 600;
+        }
+        
+        .team-preview {
+            background: var(--bg-light);
+            padding: 6rem 0;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .team-member {
+            background: white;
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+        
+        .member-image {
+            height: 250px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+        
+        .member-info {
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="../index.html" class="logo">
+                <span class="logo-icon">{"}</span>
+                <span class="logo-text">PrinciplesOfDesign</span>
+            </a>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <ul class="nav-menu">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../portfolio/index.html">Portfolio</a></li>
+                <li><a href="../services/index.html">Layanan</a></li>
+                <li><a href="../principles/index.html">Prinsip</a></li>
+                <li><a href="../blog/index.html">Blog</a></li>
+                <li><a href="index.html" class="active">Tentang Kami</a></li>
+                <li><a href="../contact/index.html">Kontak</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <div class="container">
+            <h1>Tentang Principles of Design Studio</h1>
+            <p class="page-subtitle">Studio desain profesional yang mengkhususkan diri pada prinsip desain yang berani, inovasi kreatif, dan solusi visual yang berdampak.</p>
+        </div>
+    </header>
+
+    <section class="story-section">
+        <div class="container">
+            <div class="story-content">
+                <h2 class="section-title">Cerita Kami</h2>
+                <p class="section-subtitle">Perjalanan dari ide sederhana menjadi studio desain yang diakui</p>
+                
+                <div class="story-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Kelahiran Sebuah Ide</h3>
+                            <p>Berawal dari obrolan di kedai kopi antara tiga desainer yang frustrasi dengan pendekatan desain konvensional. Kami percaya ada cara yang lebih baik untuk menyelesaikan masalah kreatif.</p>
+                        </div>
+                        <div class="timeline-year">2022</div>
+                        <div class="timeline-content">
+                            <h3>Studio Pertama</h3>
+                            <p>Mendirikan studio kecil dengan filosofi "principles over trends". Fokus pada pendekatan berbasis prinsip daripada mengikuti tren sesaat.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Proyek Perintis</h3>
+                            <p>Menyelesaikan proyek branding pertama untuk startup lokal. Pendekatan berbasis prinsip kami terbukti efektif dalam menciptakan identitas yang kuat dan scalable.</p>
+                        </div>
+                        <div class="timeline-year">2023</div>
+                        <div class="timeline-content">
+                            <h3>Ekspansi Tim</h3>
+                            <p>Menambah anggota tim dengan spesialisasi berbeda. Kini kami memiliki tim multidisiplin yang lengkap untuk menangani proyek kompleks.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Pengakuan Industri</h3>
+                            <p>Memenangkan penghargaan desain pertama kami untuk proyek UI/UX yang inovatif. Pendekatan kami mulai mendapat pengakuan dari komunitas desain.</p>
+                        </div>
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-content">
+                            <h3>Klien Internasional</h3>
+                            <p>Mulai bekerja dengan klien dari luar negeri. Prinsip desain kami terbukti universal dan efektif di berbagai budaya dan pasar.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Studio Baru</h3>
+                            <p>Pindah ke studio yang lebih besar dengan fasilitas lengkap. Ruang yang dirancang untuk mendukung kreativitas dan kolaborasi tim.</p>
+                        </div>
+                        <div class="timeline-year">2025</div>
+                        <div class="timeline-content">
+                            <h3>Pendekatan Holistik</h3>
+                            <p>Mengembangkan metodologi desain holistik yang mengintegrasikan UI/UX, branding, dan desain grafis dalam satu sistem yang kohesif.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="values-section">
+        <div class="container">
+            <h2 class="section-title">Nilai-Nilai Kami</h2>
+            <p class="section-subtitle">Prinsip yang memandu setiap keputusan dan interaksi kami</p>
+            
+            <div class="values-grid">
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Berpikir Berprinsip</h3>
+                    <p>Kami percaya pada pendekatan berbasis prinsip yang timeless, bukan sekadar mengikuti tren yang sementara.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Kolaborasi Mendalam</h3>
+                    <p>Kami bekerja bersama klien sebagai mitra strategis, bukan sekadar vendor. Proses kami transparan dan inklusif.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Dampak Terukur</h3>
+                    <p>Setiap desain harus memberikan dampak nyata. Kami mengukur keberhasilan berdasarkan metrik yang relevan untuk bisnis Anda.</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Passion untuk Detail</h3>
+                    <p>Kami mencintai detail-detail kecil yang membuat perbedaan besar. Kesempurnaan ada dalam eksekusi yang teliti.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats-section">
+        <div class="container">
+            <h2 class="section-title">Dalam Angka</h2>
+            <p class="section-subtitle">Prestasi dan pencapaian kami dalam beberapa tahun terakhir</p>
+            
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">150+</div>
+                    <div class="stat-label">Proyek Selesai</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Klien Puas</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">12</div>
+                    <div class="stat-label">Penghargaan</div>
+                </div>
+                
+                <div class="stat-item">
+                    <div class="stat-number">8</div>
+                    <div class="stat-label">Negara Klien</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-preview">
+        <div class="container">
+            <h2 class="section-title">Bertemu dengan Tim Inti Kami</h2>
+            <p class="section-subtitle">Individu kreatif yang bersemangat di balik setiap proyek</p>
+            
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Alexandra Chen</h3>
+                        <p>Creative Director & Founder</p>
+                        <p>15+ tahun pengalaman dalam desain strategis dan branding.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Marcus Tan</h3>
+                        <p>Lead UI/UX Designer</p>
+                        <p>Spesialis dalam desain produk digital dan sistem design.</p>
+                    </div>
+                </div>
+                
+                <div class="team-member">
+                    <div class="member-image">
+                        <i class="fas fa-user"></i>
+                    </div>
+                    <div class="member-info">
+                        <h3>Sophia Williams</h3>
+                        <p>Brand Strategist</p>
+                        <p>Ahli dalam positioning merek dan strategi komunikasi visual.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section-cta">
+                <a href="../team/index.html" class="btn btn-outline">Kenali Seluruh Tim</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="../index.html" class="logo footer-logo">
+                        <span class="logo-icon">{"}</span>
+                        <span class="logo-text">PrinciplesOfDesign</span>
+                    </a>
+                    <p class="footer-tagline">Mengubah kompleksitas menjadi kejelasan melalui prinsip desain yang terencana.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-link-group">
+                        <h4>Studio</h4>
+                        <ul>
+                            <li><a href="index.html">Tentang Kami</a></li>
+                            <li><a href="../team/index.html">Tim Kami</a></li>
+                            <li><a href="../careers/index.html">Karir</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Layanan</h4>
+                        <ul>
+                            <li><a href="../services/ui-ux.html">UI/UX Design</a></li>
+                            <li><a href="../services/branding.html">Branding</a></li>
+                            <li><a href="../services/graphic-design.html">Desain Grafis</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-link-group">
+                        <h4>Kontak</h4>
+                        <ul>
+                            <li><a href="../contact/index.html">Formulir Kontak</a></li>
+                            <li><a href="mailto:info@principlesofdesign.studio">Email Kami</a></li>
+                            <li><a href="tel:+621234567890">Telepon</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Principles of Design Studio. Semua hak dilindungi.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-dribbble"></i></a>
+                    <a href="#"><i class="fab fa-behance"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+</body>
+</html>
