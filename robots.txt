@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /search/
+
+Sitemap: https://principlesofdesign.studio/sitemap.xml
+
+# Google-specific
+User-agent: Googlebot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Bing-specific
+User-agent: bingbot
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Crawl-delay untuk mencegah overload
+Crawl-delay: 2
+
+# Clean params untuk menghindari duplicate content
+Clean-param: ref /blog/
+Clean-param: source /portfolio/
